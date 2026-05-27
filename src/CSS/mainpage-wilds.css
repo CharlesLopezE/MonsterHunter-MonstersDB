@@ -41,10 +41,10 @@ font-weight: bold; cursor: pointer; font-family: inherit;}
 
 .dropdown {position: relative; display: inline-block;}
 
-.dropdown-menu {display: none; position: absolute; top: 100%; left: 0; background-color: #1a1a1a; border: 1px solid var(--text-dark); border-radius: 5px; min-width: 150px; z-index: 100;}
+.dropdown-menu {display: none; position: absolute; top: 100%; left: 0; background-color: #c6833a; border: 1px solid var(--text-dark); border-radius: 5px; min-width: 150px; z-index: 100;}
 .dropdown-menu.open {display: block;}
 .dropdown-item {padding: 10px 15px; cursor: pointer; transition: background 0.3s;}
-.dropdown-item:hover {background-color: #2a2a2a;}
+.dropdown-item:hover {background-color: #e09442;}
 
 .search-bar {flex: 1; background-color: var(--card-bg); border-radius: 20px; padding: 8px 15px;
 display: flex; justify-content: space-between; align-items: center;}
@@ -61,6 +61,4 @@ display: flex; align-items: center; justify-content: center; padding: 10px; box-
 .monster-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 .monster-name {background-color: var(--card-bg); border-top: 1px solid var(--text-dark); padding: 8px;
-font-weight: bold;
-font-size: 0.85em;
-}
+font-weight: bold; font-size: 0.85em;}
