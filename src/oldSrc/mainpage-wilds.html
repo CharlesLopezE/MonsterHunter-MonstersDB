@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter: Monster-DB</title>
+    <link rel="stylesheet" href="../CSS/mainpage-wilds.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-header">Monster<br>Hunter:<br>Monster-DB</div>
+        <div class="nav-item">MONSTER HUNTER WILDS</div>
+        <div class="nav-item">MONSTER HUNTER RISE</div>
+        <div class="nav-item">MONSTER HUNTER WORLD</div>
+
+        <div class="nav-footer">
+            <a href="https://github.com/YOUR-USERNAME/MosterHunter-MonstersDB" target="_blank" class="github-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Monsters</h1>
+
+        <div class="toolbar">
+            <button class="btn">Large Monsters</button>
+            <button class="btn">Small Monsters</button>
+            <div class="dropdown">
+                <button class="btn" onclick="toggleDropdown()">Sort By ▾</button>
+                <div class="dropdown-menu" id="sortDropdown">
+                    <div class="dropdown-item" onclick="sortBy('name')">Name (A–Z)</div>
+                    <div class="dropdown-item" onclick="sortBy('name-desc')">Name (Z–A)</div>
+                    <div class="dropdown-item" onclick="sortBy('species')">Species</div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <span>Search</span>
+                <span>🔍</span>
+            </div>
+        </div>
+
+        <div class="monster-grid">
+            <!-- Sample Card -->
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Chatacabra_Icon.webp" alt="Chatacabra"></div>
+                <div class="monster-name">Chatacabra</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Quematrice_Icon.webp" alt="Quematrice"></div>
+                <div class="monster-name">Quematrice</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Balahara_Icon.webp" alt="Balahara"></div>
+                <div class="monster-name">Balahara</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Doshaguma_Icon.webp" alt="Doshaguma"></div>
+                <div class="monster-name">Doshaguma</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Lala_Barina_Icon.webp" alt="Lala Barina"></div>
+                <div class="monster-name">Lala Barina</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Congalala_Icon.webp " alt="Congalala"></div>
+                <div class="monster-name">Congalala</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Uth_Duna_Icon.webp" alt="Uth-Duna"></div>
+                <div class="monster-name">Uth Duna</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rey_Dau_Icon.webp" alt="Rey-Dau"></div>
+                <div class="monster-name">Rey Dau</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rompopolo_Icon.webp" alt="Rompopolo"></div>
+                <div class="monster-name">Rompopolo</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Ajarakan_Icon.webp" alt="Ajarakan"></div>
+                <div class="monster-name">Ajarakan</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Nu_Udra_Icon.webp" alt="Nu Udra"></div>
+                <div class="monster-name">Nu Udra</div>
+            </div>
+            <div class="monster-card">
+                <div class="monster-image"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Nerscylla_Icon.webp" alt="Nerscylla"></div>
+                <div class="monster-name">Nerscylla</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById('sortDropdown').classList.toggle('open');
+        }
+
+        // Close dropdown if user clicks outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.getElementById('sortDropdown').classList.remove('open');
+            }
+        });
+
+        function sortBy(method) {
+            const grid = document.querySelector('.monster-grid');
+            const cards = Array.from(grid.querySelectorAll('.monster-card'));
+
+            cards.sort((a, b) => {
+                const nameA = a.querySelector('.monster-name').textContent;
+                const nameB = b.querySelector('.monster-name').textContent;
+                if (method === 'name') return nameA.localeCompare(nameB);
+                if (method === 'name-desc') return nameB.localeCompare(nameA);
+                return 0;
+            });
+
+            cards.forEach(card => grid.appendChild(card));
+            document.getElementById('sortDropdown').classList.remove('open');
+        }   
+    </script>
+</body>
+</html>
