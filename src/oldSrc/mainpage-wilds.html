@@ -22,7 +22,9 @@
     </nav>
 
     <main>
-        <h1>Monsters</h1>
+        <div>
+            <h1><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Emblem/417px-MHWilds-Emblem.png.webp" alt="Monster Hunter Wilds Logo" class="game-logo">Monsters</h1>
+        </div>
 
         <div class="toolbar">
             <button class="btn">Large Monsters</button>
@@ -32,185 +34,22 @@
                 <div class="dropdown-menu" id="sortDropdown">
                     <div class="dropdown-item" onclick="sortBy('name')">Name (A–Z)</div>
                     <div class="dropdown-item" onclick="sortBy('name-desc')">Name (Z–A)</div>
-                    <div class="dropdown-item" onclick="sortBy('species')">Species</div>
-                    <div class="dropdown-item" onclick="sortBy('rank')">Rank</div>
                 </div>
             </div>
             <div class="search-bar">
-                <span>Search</span>
+                <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchMonster()">
                 <span>🔍</span>
             </div>
         </div>
         
         <h2>Base Monster Hunter Wilds</h2>
-        <div class="monster-grid">
-            <!-- Sample Card -->
-            <div class="monster-card">
-                <div class="monster-image" data-name="Chatacabra" data-species="Amphibians" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Chatacabra_Icon.webp" alt="Chatacabra"></div>
-                <div class="monster-name">Chatacabra</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Quematrice" data-species="Brute Wyvern" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Quematrice_Icon.webp" alt="Quematrice"></div>
-                <div class="monster-name">Quematrice</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Lala Barina" data-species="Temnocerans" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Lala_Barina_Icon.webp" alt="Lala Barina"></div>
-                <div class="monster-name">Lala Barina</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Congalala" data-species="Fanged Beasts" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Congalala_Icon.webp" alt="Congalala"></div>
-                <div class="monster-name">Congalala</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Balahara" data-species="Leviathans" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Balahara_Icon.webp" alt="Balahara"></div>
-                <div class="monster-name">Balahara</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Doshaguma" data-species="Fanged Beasts" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Doshaguma_Icon.webp " alt="Doshaguma"></div>
-                <div class="monster-name">Doshaguma</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Uth Duna" data-species="Leviathans" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Uth_Duna_Icon.webp" alt="Uth-Duna"></div>
-                <div class="monster-name">Uth Duna</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Rompopolo" data-species="Brute Wyvern" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rompopolo_Icon.webp" alt="Rompopolo"></div>
-                <div class="monster-name">Rompopolo</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Rey Dau" data-species="Flying Wyverns" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rey_Dau_Icon.webp" alt="Rey Dau"></div>
-                <div class="monster-name">Rey Dau</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Nerscylla" data-species="Temnocerans" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Nerscylla_Icon.webp" alt="Nerscylla"></div>
-                <div class="monster-name">Nerscylla</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Hirabami" data-species="Leviathans" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Hirabami_Icon.webp" alt="Hirabami"></div>
-                <div class="monster-name">Hirabami</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Ajarakan" data-species="Fanged Beasts" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Ajarakan_Icon.webp" alt="Ajarakan"></div>
-                <div class="monster-name">Ajarakan</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Nu Udra" data-species="Cephalopods" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Nu_Udra_Icon.webp" alt="Nu Udra"></div>
-                <div class="monster-name">Nu Udra</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Guardian Doshaguma" data-species="Constructs" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Guardian_Doshaguma_Icon.webp" alt="Guardian Doshaguma"></div>
-                <div class="monster-name">Guardian Doshaguma</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Guardian Rathalos" data-species="Constructs" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Guardian_Rathalos_Icon.webp" alt="Guardian Rathalos"></div>
-                <div class="monster-name">Guardian Rathalos</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Guardian Ebony Odogaron" data-species="Constructs" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Guardian_Ebony_Odogaron_Icon.webp" alt="Guardian Ebony Odogaron"></div>
-                <div class="monster-name">Guardian Ebony Odogaron</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Xu Wu" data-species="Cephalopods" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Xu_Wu_Icon.webp" alt="Xu Wu"></div>
-                <div class="monster-name">Xu Wu</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Guardian Arkveld" data-species="Constructs" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Guardian_Arkveld_Icon.webp" alt="Guardian Arkveld"></div>
-                <div class="monster-name">Guardian Arkveld</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Zoh Shia" data-species="Constructs" data-rank="Low"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Zoh_Shia_Icon.webp" alt="Zoh Shia"></div>
-                <div class="monster-name">Zoh Shia</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Yian Kut-Ku" data-species="Bird Wyvern" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Yian_Kut-Ku_Icon.webp" alt="Yian Kut-Ku"></div>
-                <div class="monster-name">Yian Kut-Ku</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Rathian" data-species="Flying Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rathian_Icon.webp" alt="Rathian"></div>
-                <div class="monster-name">Rathian</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Gypceros" data-species="Bird Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Gypceros_Icon.webp" alt="Gypceros"></div>
-                <div class="monster-name">Gypceros</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Blangonga" data-species="Fanged Beasts" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Blangonga_Icon.webp" alt="Blangonga"></div>
-                <div class="monster-name">Blangonga</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Rathalos" data-species="Flying Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Rathalos_Icon.webp" alt="Rathalos"></div>
-                <div class="monster-name">Rathalos</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Guardian Fulgur Anjanath" data-species="Constructs" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Guardian_Fulgur_Anjanath_Icon.webp" alt="Guardian Fulgur Anjanath"></div>
-                <div class="monster-name">Guardian Fulgur Anjanath</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Gravios" data-species="Flying Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Gravios_Icon.webp" alt="Gravios"></div>
-                <div class="monster-name">Gravios</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Jin Dahaad" data-species="Leviathans" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Jin_Dahaad_Icon.webp" alt="Jin Dahaad"></div>
-                <div class="monster-name">Jin Dahaad</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Gore Magala" data-species="Demi Elder" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Gore_Magala_Icon.webp" alt="Gore Magala"></div>
-                <div class="monster-name">Gore Magala</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Arkveld" data-species="Flying Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Arkveld_Icon.webp" alt="Arkveld"></div>
-                <div class="monster-name">Arkveld</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Mizutsune" data-species="Leviathans" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Mizutsune_Icon.webp" alt="Mizutsune"></div>
-                <div class="monster-name">Mizutsune</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Lagiacrus" data-species="Leviathans" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Lagiacrus_Icon.webp" alt="Lagiacrus"></div>
-                <div class="monster-name">Lagiacrus</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Seregios" data-species="Flying Wyverns" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Seregios_Icon.webp" alt="Seregios"></div>
-                <div class="monster-name">Seregios</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Omega Planetes" data-species="???" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Omega_Planetes_Icon.webp" alt="Omega Planetes"></div>
-                <div class="monster-name">Omega Planetes</div>
-            </div>
-            <div class="monster-card">
-                <div class="monster-image" data-name="Gogmazios" data-species="Elder Dragon" data-rank="High"><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Gogmazios_Icon.webp" alt="Gogmazios"></div>
-                <div class="monster-name">Gogmazios</div>
-            </div>
-        </div>
+        <div class="monster-grid" id="monsterGrid"></div>
     </main>
 
-    <script>
-        function toggleDropdown() {
-            document.getElementById('sortDropdown').classList.toggle('open');
-        }
+     <!-- MONSTER DATA -->
+    <script src="../JS/monsters-wilds.js"></script>
 
-        // Close dropdown if user clicks outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.dropdown')) {
-                document.getElementById('sortDropdown').classList.remove('open');
-            }
-        });
-
-        function sortBy(method) {
-            const grid = document.querySelector('.monster-grid');
-            const cards = Array.from(grid.querySelectorAll('.monster-card'));
-
-            cards.sort((a, b) => {
-                const nameA = a.querySelector('.monster-name').textContent;
-                const nameB = b.querySelector('.monster-name').textContent;
-                if (method === 'name') return nameA.localeCompare(nameB);
-                if (method === 'name-desc') return nameB.localeCompare(nameA);
-                return 0;
-            });
-
-            cards.forEach(card => grid.appendChild(card));
-            document.getElementById('sortDropdown').classList.remove('open');
-        }   
-    </script>
+    <!-- PAGE FUNCTIONALITY -->
+    <script src="../JS/mainpage-wilds.js"></script>
 </body>
 </html>

@@ -31,10 +31,12 @@ main { flex: 1; padding: 40px; overflow-y: auto; }
 
 h1 {font-size: 3em; text-decoration: underline; margin-top: 0; letter-spacing: 2px;}
 
+.game-logo {width: 80px; height: auto; vertical-align: middle; margin-right: 15px;}
+
 /* Toolbar / Filters */
 .toolbar {display: flex; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px solid var(--text-dark); align-items: center;}
 
-.btn {background-color: var(--accent-orange); border: none; padding: 8px 20px; border-radius: 20px;
+.btn {box-shadow: 1px 3px 1px #555555; background-color: var(--accent-orange); border: 2px solid var(--text-dark); padding: 8px 20px; border-radius: 20px;
 font-weight: bold; cursor: pointer; font-family: inherit;}
 .btn:hover {background-color: #e5943c;}
 
@@ -45,8 +47,20 @@ font-weight: bold; cursor: pointer; font-family: inherit;}
 .dropdown-item {padding: 10px 15px; cursor: pointer; transition: background 0.3s;}
 .dropdown-item:hover {background-color: #e09442;}
 
-.search-bar {margin-left:auto; width: 100%; max-width:300px; background-color: var(--card-bg); border-radius: 20px; padding: 8px 15px;
-display: flex; justify-content: space-between; align-items: center; color:white;}
+/* =========================
+   SEARCH BAR SECTION
+========================= */
+
+.search-bar {box-shadow: 1px 3px 1px #555555; border: 2px solid var(--text-dark); margin-left: auto; width: 500px; background-color: var(--card-bg); border-radius: 20px; padding: 8px 15px;
+display: flex; align-items: center; gap: 10px;
+}
+
+.search-bar input {flex: 1; border: none; outline: none; background: transparent; color: white; font-size: 1rem;
+font-family: inherit;}
+
+.search-bar input::placeholder {color: rgba(255,255,255,0.7);}
+
+.search-icon {color: white;}
 
 /* Monster Grid */
 .monster-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 25px;}
@@ -61,6 +75,18 @@ display: flex; align-items: center; justify-content: center; padding: 10px; box-
 
 .monster-name {background-color: var(--card-bg); border-top: 1px solid var(--text-dark); padding: 8px;
 font-weight: bold; font-size: 0.85em;}
+
+.monster-species,
+.monster-rank {font-size: 0.8rem; margin-top: 2px;}
+/* LABEL */
+
+.info-label {color: #252525; font-weight: bold;}
+/* SPECIES VALUE */
+
+.info-value {color: #ebe8e3;}
+/* RANK VALUE */
+
+.info-value-rank {color: #ebe8e3;}
 
 /* Scrollbar */
 /* Custom Scrollbar */
