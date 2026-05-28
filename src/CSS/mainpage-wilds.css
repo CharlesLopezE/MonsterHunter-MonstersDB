@@ -5,7 +5,7 @@ body {margin: 0; font-family: 'Georgia', serif; display: flex; height: 100vh;
 background-color: var(--content-bg); color: var(--text-dark);}
 
 /* Sidebar Navigation */
-nav {display: flex; flex-direction: column; height: 100vh; width: 200px; background-color: var(--primary-bg);
+nav {display: flex; flex-direction: column; height: 100vh; width: 260px; background-color: var(--primary-bg);
 padding: 20px; color: white; box-shadow: 2px 0 5px rgba(0,0,0,0.2); box-sizing: border-box;
 transition: width 0.3s, padding 0.3s ease;}
 
