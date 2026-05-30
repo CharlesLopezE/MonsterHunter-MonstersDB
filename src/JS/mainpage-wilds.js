@@ -7,7 +7,7 @@ function showLargeMonsters() {
     displayMonsters(currentMonsters);
 
     document.querySelector("h2").textContent =
-        "Large Monsters";
+        "Base Monster Hunter Wilds";
 
 }
 
@@ -18,7 +18,7 @@ function showSmallMonsters() {
     displayMonsters(currentMonsters);
 
     document.querySelector("h2").textContent =
-        "Small Monsters";
+        "Base Monster Hunter Wilds";
 
 }
 
