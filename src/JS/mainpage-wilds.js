@@ -1,3 +1,27 @@
+let currentMonsters = largeMonsters;
+
+function showLargeMonsters() {
+
+    currentMonsters = largeMonsters;
+
+    displayMonsters(currentMonsters);
+
+    document.querySelector("h2").textContent =
+        "Large Monsters";
+
+}
+
+function showSmallMonsters() {
+
+    currentMonsters = smallMonsters;
+
+    displayMonsters(currentMonsters);
+
+    document.querySelector("h2").textContent =
+        "Small Monsters";
+
+}
+
 const monsterGrid =
     document.getElementById("monsterGrid");
 /* =========================
@@ -35,7 +59,7 @@ function displayMonsters(monstersToDisplay) {
         `;
     });
 }
-displayMonsters(monsters);
+displayMonsters(largeMonsters);
 /* =========================
    SEARCH
 ========================= */
@@ -46,7 +70,7 @@ function searchMonster() {
         .toLowerCase();
 
     const filteredMonsters =
-        monsters.filter(monster =>
+        currentMonsters.filter(monster =>
             monster.name
                 .toLowerCase()
                 .includes(input)

@@ -1,4 +1,4 @@
-const monsters = [
+const largeMonsters = [
     {
         name: "Chatacabra",
         species: "Amphibians",
@@ -303,6 +303,166 @@ const monsters = [
 
         image:
         "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/LargeMonsters-Icon/MHWilds-Gogmazios_Icon.webp"
+    }
+
+];
+
+const smallMonsters = [
+    {
+        name: "Baunos",
+        species: "Wingdrakes",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Baunos_Icon.webp"
     },
 
+    {
+        name: "Blango",
+        species: "Fanged Beasts",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Blango_Icon.webp"
+    },
+    {
+        name: "Bulaqchi",
+        species: "Neopterons",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Bulaqchi_Icon.webp"
+    },
+
+    {
+        name: "Ceratonoth",
+        species: "Herbivores",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Ceratonoth_Icon.webp"
+    },
+    
+    {
+        name: "Ceratonoth Female",
+        species: "Wingdrakes",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Ceratonoth_Female_Icon.png"
+    },
+
+    {
+        name: "Comaqchi",
+        species: "Neopterons",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Comaqchi_Icon.webp"
+    },
+
+    {
+        name: "Conga",
+        species: "Fanged Beasts",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Conga_Icon.webp"
+    },
+
+    {
+        name: "Dalthydon",
+        species: "Herbivores",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Dalthydon_Icon.webp"
+    },
+
+    {
+        name: "Gajios",
+        species: "Leviathans",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Gajios_Icon.webp"
+    },
+
+    {
+        name: "Gelidron",
+        species: "Amphibians",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Gelidron_Icon.webp"
+    },
+
+    {
+        name: "Guardian Seikret",
+        species: "Constructs",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Guardian_Seikret_Icon.webp"
+    },
+
+    {
+        name: "Harpios",
+        species: "Wingdrakes",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Harpios_Icon.webp"
+    },
+
+    {
+        name: "Kranodath",
+        species: "Bird Wyverns",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Kranodath_Icon.webp"
+    },
+
+    {
+        name: "Nerscylla Hatchling",
+        species: "Temnocerans",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Nerscylla_Hatchling_Icon.webp"
+    },
+
+    {
+        name: "Omega Micros",
+        species: "???",
+        rank: "High-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Omega_Micros_Icon.webp"
+    },
+    {
+        name: "Piragill",
+        species: "Leviathans",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Piragill_Icon.webp"
+    },
+
+    {
+        name: "Porkeplume",
+        species: "Bird Wyverns",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Porkeplume_Icon.webp"
+    },
+
+    {
+        name: "Rafma",
+        species: "Herbivores",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Rafma_Icon.webp"
+    },
+
+    {
+        name: "Talioth",
+        species: "Bird Wyverns",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Talioth_Icon.webp"
+    },
+
+    {
+        name: "Vespoid",
+        species: "Neopterons",
+        rank: "Low-Rank",
+        image:
+        "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Vespoid_Icon.webp"
+    }
 ];
