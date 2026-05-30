@@ -7,7 +7,11 @@ background-color: var(--content-bg); color: var(--text-dark);}
 /* Sidebar Navigation */
 nav {display: flex; flex-direction: column; height: 100vh; width: 260px; background-color: var(--primary-bg);
 padding: 20px; color: white; box-shadow: 2px 0 5px rgba(0,0,0,0.2); box-sizing: border-box;
-transition: width 0.3s, padding 0.3s ease;}
+transition: width 0.3s, padding 0.3s ease; overflow: hidden;}
+
+nav.collapsed {width: 0; padding-left: 0; padding-right: 0;}
+
+nav.collapsed + #sidebarToggle {left: 0;}
 
 .nav-header {font-weight: bold; line-height: 1.2; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px; font-size: 1.2em;}
 
@@ -26,8 +30,12 @@ transition: background-color 0.2s; text-decoration: none;}
 
 .github-btn img {width: 30px; height: 30px; filter: invert(100%); /* Invert colors for dark mode */ }
 
+#sidebarToggle {position: fixed; left: 260px; top: 10px; width: 40px; height: 50px; border: none;
+cursor: pointer; background-color: var(--primary-bg); color: var(--accent-orange); font-size: 24px;
+font-weight: bold; border-radius: 0 8px 8px 0; z-index: 1000; transition: left 0.3s ease;}
+
 /* Main Content Area */
-main { flex: 1; padding: 40px; overflow-y: auto; }
+main { flex: 1; padding: 40px; overflow-y: auto; transition: margin-left 0.3s ease;}
 
 h1 {font-size: 3em; text-decoration: underline; margin-top: 0; letter-spacing: 2px;}
 

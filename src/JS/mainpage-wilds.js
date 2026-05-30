@@ -22,6 +22,24 @@ function showSmallMonsters() {
 
 }
 
+/*Toggle sidebar*/
+function toggleSidebar() {
+    const nav = document.querySelector("nav");
+
+    const button = document.getElementById("sidebarToggle");
+
+    nav.classList.toggle("collapsed");
+
+    if (nav.classList.contains("collapsed")) {
+        button.textContent = "❯";
+        button.style.left = "0px";
+    }
+    else {
+        button.textContent = "❮";
+        button.style.left = "260px";
+    }
+}
+
 const monsterGrid =
     document.getElementById("monsterGrid");
 /* =========================
