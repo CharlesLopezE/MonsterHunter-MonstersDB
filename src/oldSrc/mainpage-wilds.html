@@ -27,10 +27,10 @@
         </div>
 
         <div class="toolbar">
-            <button class="btn" onclick="showLargeMonsters()"
-                >Large Monsters
+            <button class="btn" onclick="showBaseLargeMonsters(), showExpansionLargeMonsters()">
+                Large Monsters
             </button>
-            <button class="btn" onclick="showSmallMonsters()">
+            <button class="btn" onclick="showBaseSmallMonsters(), showExpansionSmallMonsters()">
                 Small Monsters
             </button>
             <div class="dropdown">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchMonster()">
+                <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchBaseMonster(), searchExpansionMonster()">
                 <span>🔍</span>
             </div>
         </div>

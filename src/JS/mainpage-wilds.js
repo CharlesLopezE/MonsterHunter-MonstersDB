@@ -1,24 +1,48 @@
 let currentBaseMonsters = baseWildsMonsters;
 
-function showLargeMonsters() {
+function showBaseLargeMonsters() {
 
     currentBaseMonsters = baseLargeMonsters;
 
-    displayMonsters(currentBaseMonsters);
+    displayBaseMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
         "Base Monster Hunter Wilds";
 
 }
 
-function showSmallMonsters() {
+function showBaseSmallMonsters() {
 
     currentBaseMonsters = baseSmallMonsters;
 
-    displayMonsters(currentBaseMonsters);
+    displayBaseMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
         "Base Monster Hunter Wilds";
+
+}
+
+let currentExpansionMonsters = expansionWildsMonsters;
+
+function showExpansionLargeMonsters() {
+
+    currentExpansionMonsters = expansionLargeMonsters;
+
+    displayExpansionMonsters(currentExpansionMonsters);
+
+    document.querySelector("h3").textContent =
+        "Monster Hunter Wilds Expansion";
+
+}
+
+function showExpansionSmallMonsters() {
+
+    currentExpansionMonsters = expansionSmallMonsters;
+
+    displayExpansionMonsters(currentExpansionMonsters);
+
+    document.querySelector("h3").textContent =
+        "Monster Hunter Wilds Expansion";
 
 }
 
@@ -43,9 +67,9 @@ function toggleSidebar() {
 const baseMonsterGrid =
     document.getElementById("baseMonsterGrid");
 /* =========================
-   DISPLAY MONSTERS
+   DISPLAY BASE MONSTERS
 ========================= */
-function displayMonsters(monstersToDisplay) {
+function displayBaseMonsters(monstersToDisplay) {
     baseMonsterGrid.innerHTML = "";
     monstersToDisplay.forEach(monster => {
 
@@ -77,23 +101,76 @@ function displayMonsters(monstersToDisplay) {
         `;
     });
 }
-displayMonsters(baseWildsMonsters);
+displayBaseMonsters(baseWildsMonsters);
+
+const expansionMonsterGrid =
+    document.getElementById("expansionMonsterGrid");
+/* =========================
+   DISPLAY EXPANSION MONSTERS
+========================= */
+function displayExpansionMonsters(monstersToDisplay) {
+    expansionMonsterGrid.innerHTML = "";
+    monstersToDisplay.forEach(monster => {
+
+        expansionMonsterGrid.innerHTML += `
+            <div class="monster-card">
+                <div
+                    class="monster-image"
+                    data-name="${monster.name}"
+                    data-species="${monster.species}"
+                    data-rank="${monster.rank}">
+                    <img
+                        src="${monster.image}"
+                        alt="${monster.name}">
+                </div>
+                <div class="monster-name">
+                    ${monster.name}
+                    <div class="monster-species">
+                        <span class="info-label"> Species:</span>
+                        
+                        <span class="info-value">${monster.species}</span>
+                    </div>
+                    <div class="monster-rank">
+                        <span class="info-label">Rank:</span>
+                        
+                        <span class="info-value-rank">${monster.rank}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+displayExpansionMonsters(expansionWildsMonsters);
 /* =========================
    SEARCH
 ========================= */
-function searchMonster() {
+function searchBaseMonster() {
     const input =
         document.getElementById("searchInput")
         .value
         .toLowerCase();
 
     const filteredMonsters =
-        currentMonsters.filter(monster =>
+        currentBaseMonsters.filter(monster =>
             monster.name
                 .toLowerCase()
                 .includes(input)
         );
-    displayMonsters(filteredMonsters);
+    displayBaseMonsters(filteredMonsters);
+}
+function searchExpansionMonster() {
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const filteredMonsters =
+        currentExpansionMonsters.filter(monster =>
+            monster.name
+                .toLowerCase()
+                .includes(input)
+        );
+    displayExpansionMonsters(filteredMonsters);
 }
 /* =========================
    DROPDOWN
@@ -114,56 +191,60 @@ document.addEventListener("click", function(e) {
     }
 });
 
-/* =========================
-   SORTING
-========================= */
+/* =====================================
+   SORTING BASE + EXPANSION MONSTERS
+======================================*/
+function sortBaseMonsters(method) {
+
+    let sorted = [...currentBaseMonsters];
+
+    if (method === "name") {
+
+        sorted.sort((a, b) =>
+            a.name.localeCompare(b.name)
+        );
+
+    }
+    else if (method === "name-desc") {
+
+        sorted.sort((a, b) =>
+            b.name.localeCompare(a.name)
+        );
+
+    }
+
+    displayBaseMonsters(sorted);
+}
+function sortExpansionMonsters(method) {
+
+    let sorted = [...currentExpansionMonsters];
+
+    if (method === "name") {
+
+        sorted.sort((a, b) =>
+            a.name.localeCompare(b.name)
+        );
+
+    }
+    else if (method === "name-desc") {
+
+        sorted.sort((a, b) =>
+            b.name.localeCompare(a.name)
+        );
+
+    }
+
+    displayExpansionMonsters(sorted);
+}
+
 function sortBy(method) {
 
-    const cards =
-        Array.from(
-            document.querySelectorAll('.monster-card')
-        );
-    /* NAME A-Z */
-    if (method === 'name') {
-        cards.sort((a, b) => {
-            const nameA =
-                a.querySelector('.monster-image')
-                    .dataset.name
-                    .toLowerCase();
-            const nameB =
-                b.querySelector('.monster-image')
-                    .dataset.name
-                    .toLowerCase();
-            return nameA.localeCompare(nameB);
-        });
-        monsterGrid.innerHTML = "";
-        cards.forEach(card => {
-            monsterGrid.appendChild(card);
-        });
-    }
-    /* NAME Z-A */
-    else if (method === 'name-desc') {
-        cards.sort((a, b) => {
-            const nameA =
-                a.querySelector('.monster-image')
-                    .dataset.name
-                    .toLowerCase();
-            const nameB =
-                b.querySelector('.monster-image')
-                    .dataset.name
-                    .toLowerCase();
-            return nameB.localeCompare(nameA);
-        });
+    sortBaseMonsters(method);
 
-        monsterGrid.innerHTML = "";
-
-        cards.forEach(card => {
-            monsterGrid.appendChild(card);
-        });
-    }
+    sortExpansionMonsters(method);
 
     document
-        .getElementById('sortDropdown')
+        .getElementById("sortDropdown")
         .classList
-        .remove('open');
+        .remove("open");
 }

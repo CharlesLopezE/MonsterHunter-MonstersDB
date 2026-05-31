@@ -219,3 +219,7 @@ const baseSmallMonsters = [
 
     {name: "Vespoid", species: "Neopterons", rank: "Low-Rank", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/SmallMonsters-Icon/MHWilds-Vespoid_Icon.webp"}
 ];
+
+const expansionWildsMonsters = [{}];
+const expansionLargeMonsters = [{}];
+const expansionSmallMonsters = [{}];
