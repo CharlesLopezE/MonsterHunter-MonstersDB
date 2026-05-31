@@ -1,10 +1,10 @@
-let currentMonsters = largeMonsters;
+let currentBaseMonsters = baseWildsMonsters;
 
 function showLargeMonsters() {
 
-    currentMonsters = largeMonsters;
+    currentBaseMonsters = baseLargeMonsters;
 
-    displayMonsters(currentMonsters);
+    displayMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
         "Base Monster Hunter Wilds";
@@ -13,9 +13,9 @@ function showLargeMonsters() {
 
 function showSmallMonsters() {
 
-    currentMonsters = smallMonsters;
+    currentBaseMonsters = baseSmallMonsters;
 
-    displayMonsters(currentMonsters);
+    displayMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
         "Base Monster Hunter Wilds";
@@ -40,16 +40,16 @@ function toggleSidebar() {
     }
 }
 
-const monsterGrid =
-    document.getElementById("monsterGrid");
+const baseMonsterGrid =
+    document.getElementById("baseMonsterGrid");
 /* =========================
    DISPLAY MONSTERS
 ========================= */
 function displayMonsters(monstersToDisplay) {
-    monsterGrid.innerHTML = "";
+    baseMonsterGrid.innerHTML = "";
     monstersToDisplay.forEach(monster => {
 
-        monsterGrid.innerHTML += `
+        baseMonsterGrid.innerHTML += `
             <div class="monster-card">
                 <div
                     class="monster-image"
@@ -77,7 +77,7 @@ function displayMonsters(monstersToDisplay) {
         `;
     });
 }
-displayMonsters(largeMonsters);
+displayMonsters(baseWildsMonsters);
 /* =========================
    SEARCH
 ========================= */
