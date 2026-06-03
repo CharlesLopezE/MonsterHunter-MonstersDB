@@ -85,7 +85,7 @@ function displayBaseMonsters(monstersToDisplay) {
                         alt="${monster.name}">
                 </div>
                 <div class="monster-name">
-                    ${monster.name}
+                    <a href="infopage-wilds.html">${monster.name}</a>
                     <div class="monster-species">
                         <span class="info-label"> Species:</span>
                         

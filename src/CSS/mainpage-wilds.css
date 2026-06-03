@@ -86,6 +86,10 @@ display: flex; align-items: center; justify-content: center; padding: 10px; box-
 .monster-name {background-color: var(--card-bg); border-top: 1px solid var(--text-dark); padding: 8px;
 font-weight: bold; font-size: 0.85em;}
 
+.monster-name a {color: var(--text-dark); text-decoration: none;}
+.monster-name a::after {font-size: 0.75em; color: var(--accent-orange);}
+.monster-name a:hover {color: var(--accent-orange); text-decoration: underline;}
+
 .monster-species,
 .monster-rank {font-size: 0.8rem; margin-top: 2px;}
 /* LABEL */
