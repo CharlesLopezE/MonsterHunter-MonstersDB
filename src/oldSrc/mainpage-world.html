@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Icons/20px-UI-Hunt_Quest_Icon.png.webp">
+    <title>Monster Hunter: Monster-DB | World</title>
+    <link rel="stylesheet" href="../CSS/mainpage-world.css">
+</head>
+<body>
+    <nav>
+        <button id="sidebarToggle" onclick="toggleSidebar()">❮</button>
+        <div class="nav-header">Monster Hunter:<br>Monsters-DB</div>
+        <div class="nav-item"><a href="mainpage-wilds.html">MONSTER HUNTER WILDS</a></div>
+        <div class="nav-item"><a href="mainpage-rise.html">MONSTER HUNTER RISE</a></div>
+        <div class="nav-item"><a href="mainpage-world.html">MONSTER HUNTER WORLD</a></div>
+
+        <div class="nav-footer">
+            <a href="https://github.com/YOUR-USERNAME/MosterHunter-MonstersDB" target="_blank" class="github-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            <h1><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Emblem/417px-MHWilds-Emblem.png.webp" alt="Monster Hunter Wilds Logo" class="game-logo">Monsters</h1>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn" onclick="showBaseLargeMonsters(), showExpansionLargeMonsters()">
+                Large Monsters
+            </button>
+            <button class="btn" onclick="showBaseSmallMonsters(), showExpansionSmallMonsters()">
+                Small Monsters
+            </button>
+            <div class="dropdown">
+                <button class="btn" onclick="toggleDropdown()">Sort By ▾</button>
+                <div class="dropdown-menu" id="sortDropdown">
+                    <div class="dropdown-item" onclick="sortBy('name')">Name (A–Z)</div>
+                    <div class="dropdown-item" onclick="sortBy('name-desc')">Name (Z–A)</div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchBaseMonster(), searchExpansionMonster()">
+                <span>🔍</span>
+            </div>
+        </div>
+        
+        <h2 style="font-size:xx-large;">Monster Hunter Rise</h2>
+        <div class="monster-grid" id="baseMonsterGrid"></div>
+        <h3 style="font-size:xx-large;">Monster Hunter Rise: Sunbreak</h3>
+        <div class="monster-grid" id="expansionMonsterGrid"></div>
+    </main>
+
+     <!-- MONSTER DATA -->
+    <script src="../JS/monsters-world.js"></script>
+
+    <!-- PAGE FUNCTIONALITY -->
+    <script src="../JS/mainpage-world.js"></script>
+</body>
+</html>
