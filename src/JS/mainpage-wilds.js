@@ -1,9 +1,7 @@
 let currentBaseMonsters = baseWildsMonsters;
 
 function showBaseLargeMonsters() {
-
     currentBaseMonsters = baseLargeMonsters;
-
     displayBaseMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
@@ -12,9 +10,7 @@ function showBaseLargeMonsters() {
 }
 
 function showBaseSmallMonsters() {
-
     currentBaseMonsters = baseSmallMonsters;
-
     displayBaseMonsters(currentBaseMonsters);
 
     document.querySelector("h2").textContent =
@@ -25,9 +21,7 @@ function showBaseSmallMonsters() {
 let currentExpansionMonsters = expansionWildsMonsters;
 
 function showExpansionLargeMonsters() {
-
     currentExpansionMonsters = expansionLargeMonsters;
-
     displayExpansionMonsters(currentExpansionMonsters);
 
     document.querySelector("h3").textContent =
@@ -36,9 +30,7 @@ function showExpansionLargeMonsters() {
 }
 
 function showExpansionSmallMonsters() {
-
     currentExpansionMonsters = expansionSmallMonsters;
-
     displayExpansionMonsters(currentExpansionMonsters);
 
     document.querySelector("h3").textContent =
@@ -49,9 +41,7 @@ function showExpansionSmallMonsters() {
 /*Toggle sidebar*/
 function toggleSidebar() {
     const nav = document.querySelector("nav");
-
     const button = document.getElementById("sidebarToggle");
-
     nav.classList.toggle("collapsed");
 
     if (nav.classList.contains("collapsed")) {
@@ -195,7 +185,6 @@ document.addEventListener("click", function(e) {
    SORTING BASE + EXPANSION MONSTERS
 ======================================*/
 function sortBaseMonsters(method) {
-
     let sorted = [...currentBaseMonsters];
 
     if (method === "name") {
@@ -212,13 +201,10 @@ function sortBaseMonsters(method) {
         );
 
     }
-
     displayBaseMonsters(sorted);
 }
 function sortExpansionMonsters(method) {
-
     let sorted = [...currentExpansionMonsters];
-
     if (method === "name") {
 
         sorted.sort((a, b) =>
@@ -233,14 +219,11 @@ function sortExpansionMonsters(method) {
         );
 
     }
-
     displayExpansionMonsters(sorted);
 }
 
 function sortBy(method) {
-
     sortBaseMonsters(method);
-
     sortExpansionMonsters(method);
 
     document
