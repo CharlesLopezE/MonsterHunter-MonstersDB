@@ -75,7 +75,7 @@ function displayBaseMonsters(monstersToDisplay) {
                         alt="${monster.name}">
                 </div>
                 <div class="monster-name">
-                    <a href="infopage-wilds.html">${monster.name}</a>
+                    <a href="infopage-wilds.html?id=${monster.id}">${monster.name}</a>
                     <div class="monster-species">
                         <span class="info-label"> Species:</span>
                         
@@ -114,7 +114,7 @@ function displayExpansionMonsters(monstersToDisplay) {
                         alt="${monster.name}">
                 </div>
                 <div class="monster-name">
-                    ${monster.name}
+                    <a href="infopage-wilds.html?id=${monster.id}">${monster.name}</a>
                     <div class="monster-species">
                         <span class="info-label"> Species:</span>
                         
