@@ -56,6 +56,17 @@ justify-content: center; box-sizing: border-box;}
 
 .monster-descrip a {font-size: 1.5em; font-weight: bold; color: #3b2f21; text-align: center; display: block; margin-bottom: 15px; border-bottom: 2px solid #3b2f21; padding-bottom: 10px;}
 
+.bottom-section {display: flex; gap: 20px; align-items: flex-start; margin-top: 5px;}
+
+.low-rank, .high-rank, .master-rank {margin-top: 20px; width: 250px; min-height: 400px; background-color: #caaf89; border-radius: 10px; border: 2px solid #000000; padding: 20px;}
+
+.low-rank a, .high-rank a, .master-rank a {font-size: 1.5em; font-weight: bold; color: #3b2f21; text-align: center; display: block; margin-bottom: 15px; border-bottom: 2px solid #3b2f21; padding-bottom: 10px;}
+
+.stats-table1, .stats-table2, .stats-table3 {width: 100%; border-collapse: collapse; border: 1px solid #000000; text-align: center; margin-bottom: 1px;}
+
+.stats-table1 th, .stats-table1 td, .stats-table2 th, .stats-table2 td, .stats-table3 th, .stats-table3 td {
+border: 1px solid #000000; padding: 8px; text-align: center; background-color: #d4b282;}
+
 /* LABEL */
 
 .info-label {color: #252525; font-weight: bold;}
