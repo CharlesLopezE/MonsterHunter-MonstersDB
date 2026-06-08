@@ -25,7 +25,7 @@ function showExpansionLargeMonsters() {
     displayExpansionMonsters(currentExpansionMonsters);
 
     document.querySelector("h3").textContent =
-        "Monster Hunter Wilds Expansion";
+        "Monster Hunter Wilds: Ascendance";
 
 }
 
@@ -34,7 +34,7 @@ function showExpansionSmallMonsters() {
     displayExpansionMonsters(currentExpansionMonsters);
 
     document.querySelector("h3").textContent =
-        "Monster Hunter Wilds Expansion";
+        "Monster Hunter Wilds: Ascendance";
 
 }
 
