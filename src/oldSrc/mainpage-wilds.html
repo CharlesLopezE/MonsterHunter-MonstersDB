@@ -41,6 +41,32 @@
                     <div class="dropdown-item" onclick="sortBy('name-desc')">Name (Z–A)</div>
                 </div>
             </div>
+            <div class="dropdown">
+                <button class="btn"
+                        onclick="toggleSpeciesDropdown()">
+                    Species ▾
+                </button>
+
+                <div class="dropdown-menu"
+                    id="speciesDropdown">
+                    <div class="dropdown-item" onclick="filterSpecies('all')">All</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Flying Wyverns')">Flying Wyverns</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Leviathans')">Leviathans</div>
+                    <div class="dropdown-item"onclick="filterSpecies('Amphibians')">Amphibians</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Cephalopods')">Cephalopods</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Bird Wyverns')">Bird Wyverns</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Wingdrakes')">Wingdrakes</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Neopterons')">Neopterons</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Temnocerans')">Temnocerans</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Fanged Beasts')">Fanged Beasts</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Brute Wyverns')">Brute Wyverns</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Constructs')">Constructs</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Herbivores')">Herbivores</div>
+                    <div class="dropdown-item" onclick="filterSpecies('???')">???</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Demi Elder')">Demi-Elder</div>
+                    <div class="dropdown-item" onclick="filterSpecies('Elder Dragons')">Elder Dragons</div>
+                </div>
+            </div>
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchBaseMonster(), searchExpansionMonster()">
                 <span>🔍</span>
