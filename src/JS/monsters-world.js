@@ -5,6 +5,51 @@ const baseWorldMonsters = [
     {name:"Barroth", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Barroth_Icon.png"},
     {name:"Jyuratodus", species:"Fish Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Jyuratodus_Icon.png"},
     {name:"Tobi-Kadachi", species:"Fanged Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Tobi-Kadachi_Icon.png"},
+    {name:"Rathian", species:"Flying Wyverns", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Rathian_Icon.png"},
+    {name:"Anjanath", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Anjanath_Icon.png"},
+    {name:"Tzitzi-Ya-Ku", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Tzitzi-Ya-Ku_Icon.png"},
+    {name:"Paolumu", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Paolumu_Icon.png"},
+    {name:"Great Girros", species:"Fanged Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Great_Girros_Icon.png"},
+    {name:"Radobaan", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Radobaan_Icon.png"},
+    {name:"Legiana", species:"Flying Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Legiana_Icon.png"},
+    {name:"Odogaron", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Odogaron_Icon.png"},
+    {name:"Rathalos", species:"Flying Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Rathalos_Icon.png"},
+    {name:"Diablos", species:"Flying Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Diablos_Icon.png"},
+    {name:"Zorah Magdaros", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Zorah_Magdaros_Icon.png"},
+    {name:"Pink Rathian", species:"Flying Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Pink_Rathian_Icon.png"},
+    {name:"Nergigante", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Nergigante_Icon.png"},
+    {name:"Kushala Daora", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Kushala_Daora_Icon.png"},
+    {name:"Teostra", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Teostra_Icon.png"},
+    {name:"Vaal Hazak", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Vaal_Hazak_Icon.png"},
+    {name:"Xeno'Jiiva", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Xeno'Jiiva_Icon.png"},
+    {name:"Bazelgeuse", species:"Flying Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Bazelgeuse_Icon.png"},
+    {name:"Kirin", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Kirin_Icon.png"},
+    {name:"Dodogama", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Dodogama_Icon.png"},
+    {name:"Azure Rathalos", species:"Flying Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Azure_Rathalos_Icon.png"},
+    {name:"Lavasioth", species:"Piscine Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Lavasioth_Icon.png"},
+    {name:"Uragaan", species:"Brute Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Uragaan_Icon.png"},
+    {name:"Black Diablos", species:"Flying Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Black_Diablos_Icon.png"},
+    {name:"Deviljho", species:"Brute Wyverns", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Deviljho_Icon.png"},
+    {name:"Kulve Taroth", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Kulve_Taroth_Icon.png"},
+    {name:"Lunastra", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Lunastra_Icon.png"},
+    {name:"Behemoth", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Behemoth_Icon.png"},
+    {name:"Leshen", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Leshen_Icon.png"},
+    {name:"Ancient Leshen", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Ancient_Leshen_Icon.png"},
+    {name:"Jagras", species:"Fanged Wyverns", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Jagras_Icon.png"},
+    {name:"Kelbi", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kelbi_Icon.png"},
+    {name:"Hornetaur", species:"Neopterons", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Hornetaur_Icon.png"},
+    {name:"Kestodon-Male", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kestodon_Male_Icon.png"},
+    {name:"Kestodon-Female", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kestodon_Female_Icon.png"}
+];
+
+const baseLargeMonsters = [
+    {name:"Great Jagras", species:"Fanged Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Great_Jagras_Icon.png"},
+    {name:"Kulu-Ya-Ku", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Kulu-Ya-Ku_Icon.png"},
+    {name:"Pukei-Pukei", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Pukei-Pukei_Icon.png"},
+    {name:"Barroth", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Barroth_Icon.png"},
+    {name:"Jyuratodus", species:"Fish Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Jyuratodus_Icon.png"},
+    {name:"Tobi-Kadachi", species:"Fanged Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Tobi-Kadachi_Icon.png"},
+    {name:"Rathian", species:"Flying Wyverns", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Rathian_Icon.png"},
     {name:"Anjanath", species:"Brute Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Anjanath_Icon.png"},
     {name:"Tzitzi-Ya-Ku", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Tzitzi-Ya-Ku_Icon.png"},
     {name:"Paolumu", species:"Bird Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Paolumu_Icon.png"},
@@ -36,12 +81,12 @@ const baseWorldMonsters = [
     {name:"Ancient Leshen", species:"Elder Dragons", rank:"High-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Ancient_Leshen_Icon.png"}
 ];
 
-const baseLargeMonsters = [
-    {name:"Great Jagras", species:"Fanged Wyverns", rank:"Low-Rank",image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/LargeMonsters-Icons/MHWI-Great_Jagras_Icon.png"},
-];
-
 const baseSmallMonsters = [
-    {}
+    {name:"Jagras", species:"Fanged Wyverns", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Jagras_Icon.png"},
+    {name:"Kelbi", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kelbi_Icon.png"},
+    {name:"Hornetaur", species:"Neopterons", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Hornetaur_Icon.png"},
+    {name:"Kestodon-Male", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kestodon_Male_Icon.png"},
+    {name:"Kestodon-Female", species:"Herbivores", rank:"Low-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterWorld/SmallMonsters-Icon/MHWI-Kestodon_Female_Icon.png"}
 ];
 
 const expansionIceborneMonsters = [{}];
