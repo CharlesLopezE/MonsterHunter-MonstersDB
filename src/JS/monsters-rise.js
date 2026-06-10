@@ -184,7 +184,7 @@ const expansionSunbreakMonsters = [
     {name:"Risen Crimson Glow Valstrax", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Crimson_Glow_Valstrax_Icon.png"},
     {name:"Amatsu", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Amatsu_Icon.png"},
     {name:"Risen Shagaru Magala", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Shagaru_Magala_Icon.png"},
-    {name:"Primordial Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Primordial_Malzeno_Icon.png"},
+    {name:"Primordial Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Primordial_Malzeno_Icon.png"}
 ];
 const expansionLargeMonsters = [{}];
 const expansionSmallMonsters = [{}];
