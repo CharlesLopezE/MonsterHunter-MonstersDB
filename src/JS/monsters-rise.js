@@ -95,7 +95,7 @@ const baseLargeMonsters = [
     {name:"Rathian", species: "Flying Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Rathian_Icon.png"},
     {name:"Barioth", species: "Flying Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Barioth_Icon.png"},
     {name:"Tobi-Kadachi", species: "Flying Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Tobi-Kadachi_Icon.png"},
-    {name:"Magnamalo", species: "Brute Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Magnamalo_Icon.png"},
+    {name:"Magnamalo", species: "Fanged Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Magnamalo_Icon.png"},
     {name:"Anjanath", species: "Brute Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Anjanath_Icon.png"},
     {name:"Mizutsune", species: "Leviathans", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Mizutsune_Icon.png"},
     {name:"Almudron", species: "Brute Wyverns", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/LargeMonsters-Icon/MHRS-Almudron_Icon.png"},
@@ -154,6 +154,37 @@ const baseSmallMonsters = [
     {name:"Uroktor", species: "Leviathans", image: "../../MH-Images/MonsterHunter-Images/MonsterHunterRise/SmallMonsters-Icon/MHRS-Uroktor_Icon.png"}
 ];
 
-const expansionSunbreakMonsters = [{}];
+const expansionSunbreakMonsters = [
+    {name:"Daimyo Hermitaur", species:"Carapaceon", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Daimyo_Hermitaur_Icon.png"},
+    {name:"Blood Orange_Bishaten", species:"Fanged Beasts", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Blood_Orange_Bishaten_Icon.png"},
+    {name:"Garangolm", species:"Fanged Beasts", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Garangolm_Icon.png"},
+    {name:"Shogun Ceanataur", species:"Carapaceon", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Shogun_Ceanataur_Icon.png"},
+    {name:"Lunagaron", species:"Fanged Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Lunagaron_Icon.png"},
+    {name:"Astalos", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Astalos_Icon.png"},
+    {name:"Seregios", species:"Flying Wynerns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Seregios_Icon.png"},
+    {name:"Magma Almudron", species:"Leviathans", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Magma_Almudron_Icon.png"},
+    {name:"Gore Magala", species:"???", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Gore_Magala_Icon.png"},
+    {name:"Espinas", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Espinas_Icon.png"},
+    {name:"Pyre Rakna-Kadaki", species:"Temnocerons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Pyre_Rakna-Kadaki_Icon.png"},
+    {name:"Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Malzeno_Icon.png"},
+    {name:"Shagaru Magala", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Shagaru_Magala_Icon.png"},
+    {name:"Gaismagorm", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Gaismagorm_Icon.png"},
+    {name:"Scorned Magnamalo", species:"Fanged Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Scorned_Magnamalo_Icon.png"},
+    {name:"Seething Bazelgeuse", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Seething_Bazelgeuse_Icon.png"},
+    {name:"Silver Rathalos", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Silver_Rathalos_Icon.png"},
+    {name:"Gold Rathian", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Gold_Rathian_Icon.png"},
+    {name:"Lucent Nargacuga", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Lucent_Nargacuga_Icon.png"},
+    {name:"Flaming Espinas", species:"Flying Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Flaming_Espinas_Icon.png"},
+    {name:"Violet Mizutsune", species:"Leviathans", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Violet_Mizutsune_Icon.png"},
+    {name:"Risen Chameleos", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Chameleos_Icon.png"},
+    {name:"Chaotic Gore Magala", species:"???", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Chaotic_Gore_Magala_Icon.png"},
+    {name:"Risen Kushala Daora", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Kushala_Daora_Icon.png"},
+    {name:"Risen Teostra", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Teostra_Icon.png"},
+    {name:"Velkhana", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Velkhana_Icon.png"},
+    {name:"Risen Crimson Glow Valstrax", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Crimson_Glow_Valstrax_Icon.png"},
+    {name:"Amatsu", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Amatsu_Icon.png"},
+    {name:"Risen Shagaru Magala", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Risen_Shagaru_Magala_Icon.png"},
+    {name:"Primordial Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Primordial_Malzeno_Icon.png"},
+];
 const expansionLargeMonsters = [{}];
 const expansionSmallMonsters = [{}];
