@@ -41,6 +41,34 @@
                     <div class="dropdown-item" onclick="sortBy('name-desc')">Name (Z–A)</div>
                 </div>
             </div>
+            <div class="dropdown">
+                <button class="btn"
+                        onclick="toggleSpeciesDropdown()">
+                    Species ▾
+                </button>
+
+                <div class="dropdown-menu"
+                    id="speciesDropdown">
+                    <div class="dropdown-item" onclick="filterBaseSpecies('all'), filterExpansionSpecies('all')">All</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Flying Wyverns'), filterExpansionSpecies('Flying Wyverns')">Flying Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Piscine Wyverns'), filterExpansionSpecies('Piscine Wyverns')">Piscine Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Bird Wyverns'), filterExpansionSpecies('Bird Wyverns')">Bird Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Wingdrakes'), filterExpansionSpecies('Wingdrakes')">Wingdrakes</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Neopterons'), filterExpansionSpecies('Neopterons')">Neopterons</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Temnocerans'), filterExpansionSpecies('Temnocerans')">Temnocerans</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Fanged Beasts'), filterExpansionSpecies('Fanged Beasts')">Fanged Beasts</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Fanged Wyverns'), filterExpansionSpecies('Fanged Wyverns')">Fanged Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Snake Wyverns'), filterExpansionSpecies('Snake Wyverns')">Snake Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Brute Wyverns'), filterExpansionSpecies('Brute Wyverns')">Brute Wyverns</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Leviathans'), filterExpansionSpecies('Leviathans')">Leviathans</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Amphibians'), filterExpansionSpecies('Amphibians')">Amphibians</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Carapaceons'), filterExpansionSpecies('Carapaceons')">Carapaceons</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('???'), filterExpansionSpecies('???')">???</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Herbivores'), filterExpansionSpecies('Herbivores')">Herbivores</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Lynians'), filterExpansionSpecies('Lynians')">Lynians</div>
+                    <div class="dropdown-item" onclick="filterBaseSpecies('Elder Dragons'), filterExpansionSpecies('Elder Dragons')">Elder Dragons</div>
+                </div>
+            </div>
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search Monsters..." onkeyup="searchBaseMonster(), searchExpansionMonster()">
                 <span>🔍</span>

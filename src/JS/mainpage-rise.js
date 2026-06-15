@@ -242,3 +242,46 @@ function sortBy(method) {
         .classList
         .remove("open");
 }
+/*================
+  Species Sorting
+==================*/
+function filterBaseSpecies(species) {
+    if (species === "all") {
+        displayBaseMonsters(currentBaseMonsters);
+        return;
+    }
+    const filtered =
+        currentBaseMonsters.filter(
+            monster =>
+                monster.species === species
+        );
+    displayBaseMonsters(filtered);
+}
+function filterExpansionSpecies(species) {
+    if (species === "all") {
+        displayExpansionMonsters(currentExpansionMonsters);
+        return;
+    }
+    const filtered =
+        currentExpansionMonsters.filter(
+            monster =>
+                monster.species === species
+        );
+    displayExpansionMonsters(filtered);
+}
+
+function toggleSpeciesDropdown() {
+    document
+        .getElementById("speciesDropdown")
+        .classList
+        .toggle("open");
+}
+
+document.addEventListener("click", function(e) {
+    if (!e.target.closest(".dropdown")) {
+        document
+            .getElementById("speciesDropdown")
+            .classList
+            .remove("open");
+    }
+});
