@@ -224,7 +224,6 @@ const expansionLargeMonsters = [
     {name:"Primordial Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Primordial_Malzeno_Icon.png"}
 ];
 const expansionSmallMonsters = [
-    {name:"Primordial Malzeno", species:"Elder Dragons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/LargeMonsters-Icons/MHRS-Primordial_Malzeno_Icon.png"},
     {name:"Ceanataur", species:"Carapaceons", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/SmallMonsters-Icons/MHRS-Ceanataur_Icon.png"},
     {name:"Gowngoat", species:"Herbivores", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/SmallMonsters-Icons/MHRS-Gowngoat_Icon.png"},
     {name:"Boggi", species:"Bird Wyverns", rank:"Master-Rank", image:"../../MH-Images/MonsterHunter-Images/MonsterHunterRise-Sunbreak/SmallMonsters-Icons/MHRS-Boggi_Icon.png"},
