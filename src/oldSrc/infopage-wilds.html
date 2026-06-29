@@ -96,28 +96,43 @@
                 <a>Monster Description</a>
             </div>
             <div class="drop-rate">
-                <a>Drops</a>
-                <table class="low-rank">
-                    <thead>
-                        <tr>
-                            <th>Monster-Drops</th>
-                            <th>Rate</th>
-                        </tr>
-                    <thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <div class="drop-header">
+                <button id="prevRank" class="carousel-btn">
+                    ◀
+                </button>
+                    <h2 id="rankTitle">
+                        Low Rank Drops
+                    </h2>
+                <button id="nextRank" class="carousel-btn">
+                    ▶
+                </button>
             </div>
+
+            <table class="drop-table">
+                <thead>
+                    <tr>
+                        <th>Monster Drop</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="dropTableBody">
+                </tbody>
+            </table>
+        </div>
         </div>
     </main>
-    <!-- PAGE FUNCTIONALITY -->
-    <script src="../JS/mainpage-wilds.js"></script>
-    <!-- MONSTER DATA -->
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Config -->
+    <script src="../JS/config.js"></script>
+
+    <!-- Monster Data -->
     <script src="../JS/monsters-wilds.js"></script>
+
+    <!-- Page Logic -->
+    <script src="../JS/mainpage-wilds.js"></script>
     <script src="../JS/infopage-wilds.js"></script>
 </body>
 </html>

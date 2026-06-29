@@ -13,3 +13,95 @@ const monster =
 document.getElementById("monsterTitle")
     .textContent =
         `Information: ${monster.name}`;
+
+const ranks = [
+    "Low",
+    "High",
+    "Master"
+];
+
+let currentRankIndex = 0;
+
+document
+    .getElementById("prevRank")
+    .addEventListener("click", () => {
+
+        currentRankIndex--;
+
+        if (currentRankIndex < 0)
+            currentRankIndex =
+                ranks.length - 1;
+
+        displayDrops();
+
+    });
+
+document
+    .getElementById("nextRank")
+    .addEventListener("click", () => {
+
+        currentRankIndex++;
+
+        if (currentRankIndex >= ranks.length)
+            currentRankIndex = 0;
+
+        displayDrops();
+
+    });
+
+let allDrops = [];
+
+async function loadMonsterDrops() {
+
+    console.log("Monster ID:", monsterId);
+
+    const { data, error } = await supabaseClient
+        .from("monster_drops-wilds")
+        .select("*")
+        .eq("monster_id", monsterId);
+
+    console.log("Returned Data:", data);
+    console.log("Returned Error:", error);
+
+    if (error) {
+        return;
+    }
+
+    allDrops = data;
+
+    displayDrops();
+}
+
+loadMonsterDrops();
+
+function displayDrops() {
+
+    const rank =
+        ranks[currentRankIndex];
+
+    document.getElementById("rankTitle")
+        .textContent =
+        `${rank} Rank Drops`;
+
+    const tbody =
+        document.getElementById("dropTableBody");
+
+    tbody.innerHTML = "";
+
+    const drops =
+        allDrops.filter(drop =>
+            drop.rank === rank
+        );
+
+    drops.forEach(drop => {
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${drop.item_name}</td>
+                <td>${drop.rate}</td>
+            </tr>
+        `;
+
+    });
+
+}

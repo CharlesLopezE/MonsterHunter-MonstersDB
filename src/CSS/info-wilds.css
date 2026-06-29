@@ -67,9 +67,37 @@ justify-content: center; box-sizing: border-box;}
 .stats-table1 th, .stats-table1 td, .stats-table2 th, .stats-table2 td, .stats-table3 th, .stats-table3 td {
 border: 1px solid #000000; padding: 8px; text-align: center; background-color: #d7b990;}
 
-.low-rank {border: 1px solid #000000; border-collapse: collapse; width: 100%; text-align: center; margin-bottom: 1px;}
+.drop-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    border-bottom: 2px solid #3b2f21;
+}
 
-.low-rank th, .low-rank td {border: 1px solid #000000; padding: 8px; text-align: center; background-color: #d7b990;}
+.carousel-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+    background-color: #b99768;
+}
+
+.drop-table{
+    width:100%;
+    border-collapse:collapse;
+    border: 1px solid #000000;
+}
+
+.drop-table th,
+.drop-table td{
+    padding:12px;
+    text-align:center;
+    border:1px solid #555;
+    background-color: #d7b990;
+}
 
 /* LABEL */
 
