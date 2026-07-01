@@ -25,34 +25,28 @@ let currentRankIndex = 0;
 document
     .getElementById("prevRank")
     .addEventListener("click", () => {
-
         currentRankIndex--;
 
         if (currentRankIndex < 0)
             currentRankIndex =
                 ranks.length - 1;
-
         displayDrops();
-
     });
 
 document
     .getElementById("nextRank")
     .addEventListener("click", () => {
-
         currentRankIndex++;
 
         if (currentRankIndex >= ranks.length)
             currentRankIndex = 0;
 
         displayDrops();
-
     });
 
 let allDrops = [];
 
 async function loadMonsterDrops() {
-
     console.log("Monster ID:", monsterId);
 
     const { data, error } = await supabaseClient
@@ -94,14 +88,57 @@ function displayDrops() {
         );
 
     drops.forEach(drop => {
-
         tbody.innerHTML += `
             <tr>
+                <td>${drop.method}</td>
+                <td>${drop.drop_type}</td>
                 <td>${drop.item_name}</td>
                 <td>${drop.rate}</td>
             </tr>
         `;
-
     });
+}
+let allStats = [];
 
+async function loadMonsterStats() {
+    console.log("Monster ID:", monsterId);
+
+    const { data, error } = await supabaseClient
+        .from("monster_stats-wilds")
+        .select("*")
+        .eq("monster_id", monsterId);
+
+    console.log("Returned Data:", data);
+    console.log("Returned Error:", error);
+
+    if (error) {
+        return;
+    }
+
+    allStats = data;
+
+    displayStats();
+}
+
+loadMonsterStats();
+
+function displayStats() {
+
+    const tbody =
+        document.getElementById("statsTableBody1");
+
+    tbody.innerHTML = "";
+
+    const stats =
+        allStats.forEach(stat => {
+        tbody.innerHTML += `
+            <tr>
+                <td>${stat.element}</td>
+                <td>${stat.status_effect}</td>
+                <td>${stat.weakness}</td>
+                <td>${stat.capture_hp}</td>
+                <td>${stat.limp_hp}</td>
+            </tr>
+        `;
+    });
 }

@@ -33,7 +33,7 @@
             </h1>
         </div>
         <div class="top-section">
-            <div class="monster-render"></div>
+            <div class="monster-render" id="monsterRender"></div>
 
             <div class="monster-stats">
                 <a>Stats</a>
@@ -47,14 +47,7 @@
                             <th>Limp HP</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="statsTableBody1">
                     </tbody>
                 </table>
                 <table class="stats-table2">
@@ -66,13 +59,7 @@
                             <th>Large Gold Crown</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="statsTableBody2">
                     </tbody>
                 </table>
                 <table class="stats-table3">
@@ -82,11 +69,7 @@
                             <th>Sleeping Areas</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="statsTableBody3">
                     </tbody>
                 </table>
             </div>
@@ -112,6 +95,8 @@
             <table class="drop-table">
                 <thead>
                     <tr>
+                        <th>Method</th>
+                        <th>Drop Type</th>
                         <th>Monster Drop</th>
                         <th>Rate</th>
                     </tr>
