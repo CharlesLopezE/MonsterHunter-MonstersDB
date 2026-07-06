@@ -1,3 +1,4 @@
+/*==================Monster ID Loader====================*/
 const params =
     new URLSearchParams(
         window.location.search
@@ -14,6 +15,8 @@ document.getElementById("monsterTitle")
     .textContent =
         `Information: ${monster.name}`;
 
+
+/*==================Monster Rank Drop Scroller====================*/
 const ranks = [
     "Low",
     "High",
@@ -45,6 +48,8 @@ document
     });
 
 let allDrops = [];
+
+/*==================Monster Rank Drops Display====================*/
 
 async function loadMonsterDrops() {
     console.log("Monster ID:", monsterId);
@@ -98,6 +103,9 @@ function displayDrops() {
         `;
     });
 }
+
+/*==================Monsters Stats Display====================*/
+
 let allStats = [];
 
 async function loadMonsterStats() {
@@ -142,3 +150,18 @@ function displayStats() {
         `;
     });
 }
+/*==================Monster Render Display====================*/
+const monsterRender =
+    document.getElementById("monsterRender");
+
+function displayMonsterRender(monstersToDisplay) {
+    monsterRender.innerHTML = "";
+    document.getElementById("monsterRender").innerHTML = `
+    <img
+        src="${monster.render}"
+        alt="${monster.name}"
+        class="monster-render-image">
+    `;
+};
+
+displayMonsterRender(baseWildsMonsters);
