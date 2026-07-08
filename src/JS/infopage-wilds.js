@@ -126,6 +126,8 @@ async function loadMonsterStats() {
     allStats = data;
 
     displayStats();
+    displayStats2();
+    displayStats3();
 }
 
 loadMonsterStats();
@@ -150,6 +152,44 @@ function displayStats() {
         `;
     });
 }
+
+function displayStats2() {
+    const tbody =
+        document.getElementById("statsTableBody2");
+    
+    tbody.innerHTML = "";
+
+    const stats =
+        allStats.forEach(stat => {
+        tbody.innerHTML += `
+            <tr>
+                <td>${stat.s_gold_crown}</td>
+                <td>${stat.avg_size}</td>
+                <td>${stat.silver_crown}</td>
+                <td>${stat.l_gold_crown}</td>
+            </tr>
+        `;
+    });    
+}
+
+function displayStats3() {
+    const tbody =
+        document.getElementById("statsTableBody3");
+    
+    tbody.innerHTML = "";
+
+    const stats =
+        allStats.forEach(stat => {
+        tbody.innerHTML += `
+            <tr>
+                <td>${stat.locales}</td>
+                <td>${stat.sleeping_areas}</td>
+            </tr>
+        `;
+    });    
+}
+
+
 /*==================Monster Render Display====================*/
 const monsterRender =
     document.getElementById("monsterRender");
