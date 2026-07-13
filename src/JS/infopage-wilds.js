@@ -128,6 +128,7 @@ async function loadMonsterStats() {
     displayStats();
     displayStats2();
     displayStats3();
+    displayDescription();
 }
 
 loadMonsterStats();
@@ -187,6 +188,20 @@ function displayStats3() {
             </tr>
         `;
     });    
+}
+/*==================Monster Description Display====================*/
+
+function displayDescription() {
+    const div = 
+        document.getElementById("monsterDescription");
+    div.innerHTML = "";
+
+    const stats =
+        allStats.forEach(stat => {
+        div.innerHTML += `
+            <p>${stat.description}</p>
+        `;
+    });
 }
 
 
