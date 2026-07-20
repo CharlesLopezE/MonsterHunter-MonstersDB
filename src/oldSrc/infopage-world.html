@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Icons/MHWilds-Book_Icon_Light_Green.png">
+    <title>Monster Hunter: Monster-DB | World | Info</title>
+    <link rel="stylesheet" href="../CSS/info-world.css">
+</head>
+<body>
+    <nav>
+        <button id="sidebarToggle" onclick="toggleSidebar()">❮</button>
+        <div class="nav-header">Monster Hunter:<br>Monsters-DB</div>
+        <div class="nav-item"><a href="mainpage-wilds.html">MONSTER HUNTER WILDS</a></div>
+        <div class="nav-item"><a href="mainpage-rise.html">MONSTER HUNTER RISE</a></div>
+        <div class="nav-item"><a href="mainpage-world.html">MONSTER HUNTER WORLD</a></div>
+
+        <div class="nav-footer">
+            <a href="https://github.com/CharlesLopezE/MonsterHunter-MonstersDB.git" target="_blank" class="github-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            <h1>                
+                <span id="monsterTitle">
+                    Information:
+                </span>
+            </h1>
+        </div>
+        <div class="top-section">
+            <div class="monster-grid-render" id="monsterRender"></div>
+
+            <div class="monster-stats">
+                <a>Stats</a>
+                <table class="stats-table1">
+                    <thead>
+                        <tr>
+                            <th>Elements</th>
+                            <th>Status Effects</th>
+                            <th>Weaknesses</th>
+                            <th>Capture HP</th>
+                            <th>Limp HP</th>
+                        </tr>
+                    </thead>
+                    <tbody id="statsTableBody1">
+                    </tbody>
+                </table>
+                <table class="stats-table2">
+                    <thead>
+                        <tr>
+                            <th><img img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Icons/24px-MHWI-Small_Crown.png.webp" class="small-crown"></th>
+                            <th>Avg.</th>
+                            <th><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Icons/24px-MHWI-Silver_Crown.png.webp" class="silver-crown"></th>
+                            <th><img src="../../MH-Images/MonsterHunter-Images/MonsterHunterWilds/Icons/24px-MHWI-Gold_Crown.png.webp" class="large-crown"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="statsTableBody2">
+                    </tbody>
+                </table>
+                <table class="stats-table3">
+                    <thead>
+                        <tr>
+                            <th>Locales</th>
+                            <th>Sleeping Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="statsTableBody3">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="monster-descrip">
+                <a>Monster Description</a>
+                <div class="monster-description" id="monsterDescription"></div>
+            </div>
+            <div class="drop-rate">
+
+            <div class="drop-header">
+                <button id="prevRank" class="carousel-btn">
+                    ◀
+                </button>
+                    <h2 id="rankTitle">
+                        Low Rank Drops
+                    </h2>
+                <button id="nextRank" class="carousel-btn">
+                    ▶
+                </button>
+            </div>
+
+            <table class="drop-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Drop Type</th>
+                        <th>Monster Drop</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="dropTableBody">
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </main>
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Config -->
+    <script src="../JS/config.js"></script>
+
+    <!-- Monster Data -->
+    <script src="../JS/monsters-world.js"></script>
+
+    <!-- Page Logic -->
+    <script src="../JS/mainpage-world.js"></script>
+    <script src="../JS/infopage-world.js"></script>
+</body>
+</html>
