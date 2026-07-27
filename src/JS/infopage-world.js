@@ -15,6 +15,35 @@ document.getElementById("monsterTitle")
     .textContent =
         `Information: ${monster.name}`;
 
+/*================== Next Monster Scroller====================*/
+const prevMonsterBtn =
+    document.getElementById("prevMonster");
+const nextMonsterBtn =
+    document.getElementById("nextMonster");
+
+prevMonsterBtn.addEventListener("click", () => {
+    const currentIndex =
+        baseWorldMonsters.findIndex(
+            m => m.id === monsterId
+        );
+
+    const prevMonster =
+        baseWorldMonsters[(currentIndex - 1 + baseWorldMonsters.length) % baseWorldMonsters.length];
+
+    window.location.search = `?id=${prevMonster.id}`;
+});
+
+nextMonsterBtn.addEventListener("click", () => {
+    const currentIndex =
+        baseWorldMonsters.findIndex(
+            m => m.id === monsterId
+        );
+
+    const nextMonster =
+        baseWorldMonsters[(currentIndex + 1) % baseWorldMonsters.length];
+
+    window.location.search = `?id=${nextMonster.id}`;
+});
 
 /*==================Monster Rank Drop Scroller====================*/
 const ranks = [
